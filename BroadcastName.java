@@ -5,9 +5,13 @@ public class BroadcastName {
     private static DatagramSocket socket = null;
  
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter your name!");
-        String name = br.readLine();
+    }
+    
+    public void send(String name) throws IOException{
+//       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        System.out.println("Enter your name!");
+//        String name = br.readLine();
+        System.out.println(name);
         broadcast(name, InetAddress.getByName("255.255.255.255"));
         System.out.println("Sent");
     }
